@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "c++_basic"
+		},
+		{
+			"path": "[BJ] level2"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"climits": "cpp",
+			"ostream": "cpp",
+			"atomic": "cpp",
+			"bitset": "cpp",
+			"cmath": "cpp"
+		}
+	}
+}

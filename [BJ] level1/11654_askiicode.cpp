@@ -1,10 +1,11 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main()
 {
-    
+    char ch;
+    cin >> ch;
 
-    return 0;
+    cout << int(ch);
+    
 }
