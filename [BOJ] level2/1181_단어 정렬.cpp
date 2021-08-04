@@ -38,6 +38,8 @@ int main()
 
 /*
 1. Vector
+#include <vector>
+
 C++ 표준 라이브러리(Standard Template Library)에 있는 컨테이너로 사용자가 손쉽게 사용하기 위해 정의된 class이다.
 
 Vector의 가장 큰 장점은 동적으로 원소를 추가할 수 있으며 크기가 자동으로 늘어난다는 점이다.
@@ -52,7 +54,8 @@ vector는 배열과 마찬가지로 원소들이 하나의 메모리 블록에 �
 
 
 2. sort
-#include <algorithm> -> vscode에서는 헤더가 없어도 실행이 되지만 boj에서는 헤더를 추가해주지 않으면 compile error.
+#include <algorithm>
+-> vscode에서는 헤더가 없어도 실행이 되지만 boj에서는 헤더를 추가해주지 않으면 compile error.
 
 sort(배열 시작 위치, 끝 위치, 비교조건함수)
 
