@@ -1,5 +1,8 @@
 # Exercises to prepare for a coding test
-problems : https://solved.ac/
+problems :
+- 백준
+- 프로그래머스
+- https://solved.ac/
 
 21.08.27-------------------------  
 [뼈대문제] 백준 10828번. 스택  
