@@ -35,7 +35,6 @@ int main()
                 voca.pop();
             }
         }
-        // 테스트 케이스 안에서 새로 선언을 하는 방법도 있음 -> 초기화 해줄 필요 없음
 
         for (int i = 0; i < str.size(); i++)
         {
@@ -54,7 +53,7 @@ int main()
             }
         }
 
-        if (voca.empty()) // 좋은 단어 일때 탐색 끝난 뒤, stack이 비어있어야 함
+        if (voca.empty())
             cnt++;
     }
 

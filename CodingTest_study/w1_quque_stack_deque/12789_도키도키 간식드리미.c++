@@ -38,7 +38,7 @@ int main()
         else
         {
             if (!L2.empty() && order == L2.top()) // 첫시도 때 다음 경우를 생각하지 못해 틀렸었음
-            {
+            {                                     // empty 조건을 무조건 먼저 써야 함, 왜냐하면 두번쨰 조건인 L2.top()은 스텍이 not empty일 때이어만 하기 때문.
                 L2.pop();
                 order++;
             }
