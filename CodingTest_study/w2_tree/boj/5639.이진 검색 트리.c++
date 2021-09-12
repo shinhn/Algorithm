@@ -36,8 +36,9 @@ Node *addNode(Node *node, int key)
 
 void postOrder(Node *node)
 {
-    if (node == NULL)
+    if (node == NULL) // 안넣어주면 재귀가 끝나지 않으므로 컴파일 에러
         return;
+
     postOrder(node->left);
     postOrder(node->right);
     cout << node->key << '\n';
@@ -50,7 +51,11 @@ int main()
     cout.tie(NULL);
 
     Node *tree = NULL;
+
     while (cin >> n)
+    {
         tree = addNode(tree, n);
+    }
+
     postOrder(tree);
 }
