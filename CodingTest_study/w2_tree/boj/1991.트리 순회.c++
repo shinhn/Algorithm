@@ -17,6 +17,7 @@ struct node
 void preorder(node nodes[], int cur)
 {
     cout << (char)(cur + 'A');
+    
     if (nodes[cur].l != -1)
     {
         preorder(nodes, nodes[cur].l);

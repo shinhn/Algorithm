@@ -8,6 +8,8 @@ using namespace std;
 입력 수 제한이 없는 경우 -> while (cin >> n)
 */
 
+// 전역변수로 배열 선언할 경우 따로 해주지 않아도 처음 0으로 초기화됨 (이차원배열로 해보셈)
+
 using namespace std;
 
 struct Node

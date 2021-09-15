@@ -30,6 +30,9 @@ using namespace std;
 - 검색대상의 규모가 크지 않고, 검색 시작 지점으로부터 원하는 대상이 별로 멀지 않다면 BFS
 
 출처: https://devuna.tistory.com/32 [튜나 개발일기]
+
+
+dfs, bfs 시간복잡도 : O(간선의 수 + 정점의 수)
 */
 
 int N; // 노드의 개수
