@@ -1,8 +1,8 @@
 # Exercises to prepare for a coding test
 problems :
-- 백준
-- 프로그래머스
-- https://solved.ac/
+- 백준 (https://www.acmicpc.net/)
+- 프로그래머스 (https://programmers.co.kr/)
+-solved.ac (https://solved.ac/)
 
 21.08.27-------------------------  
   
