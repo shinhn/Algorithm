@@ -23,9 +23,12 @@ void dfs(vector<vector<string> > &tickets, vector<string> &order, vector<bool> &
     order.push_back(airp);
     cout << airp << '\n';
 
-    for (int i = 0; i < tickets.size(); i++)
-    {
-        // 출발 airp의 tickets에서의 index를 찾음
+    // for (int i = 0; i < tickets.size(); i++)
+    // {
+        
+    // }
+
+    // 출발 airp의 tickets에서의 index를 찾음
         int index;
         for (int j = 0; j < tickets.size(); j++)
         {
@@ -36,12 +39,17 @@ void dfs(vector<vector<string> > &tickets, vector<string> &order, vector<bool> &
             }
         }
 
+        /*
+        (I,A) 1 / A에서 출발하는 티켓이 없으면 break 때문에 끝나버림
+        (I,B) 2
+        (I,c) 3
+        */
+
         if (!used[index])
         {
             used[index] = true;
             dfs(tickets, order, used, tickets[index][1]);
         }
-    }
 }
 
 int main()
@@ -50,11 +58,11 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    // 예제1
-
     vector<vector<string> > tickets;
     vector<string> answer;
 
+    // 예제1
+    /*
     vector<string> t1;
     t1.push_back("ICN");
     t1.push_back("JFK");
@@ -70,8 +78,8 @@ int main()
     tickets.push_back(t1);
     tickets.push_back(t2);
     tickets.push_back(t3);
+    */
 
-    /*
     // 예제 2
 
     vector<string> t1;
@@ -99,7 +107,6 @@ int main()
     tickets.push_back(t3);
     tickets.push_back(t4);
     tickets.push_back(t5);
-    */
 
     sort(tickets.begin(), tickets.end());
 

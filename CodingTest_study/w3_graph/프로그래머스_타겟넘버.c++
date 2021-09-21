@@ -8,11 +8,12 @@ using namespace std;
 
 /*
 <문제>
-numbers의 숫자들을 모두 사용해야함 -> dfs or bfs
+완전탐색 재귀 (블로거는 dfs라고 했는데..다 같은 범주인듯)
+dfs(numbers, target, cur_index + 1, cur_num_plus); 에서 cur_index + 1 로 전에 갔던 index는 다시 가지 않아서 dfs..?
 숫자들을 모두 사용해 + or - 한 결과가 target과 같으면 answer ++
 
 <시간복잡도>
-??
+함수에서 재귀함수가 두개 있으니까 O(2^20) 여기서 20은 주어지는 숫자의 최대
 */
 
 int answer = 0;

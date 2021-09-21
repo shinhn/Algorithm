@@ -9,7 +9,7 @@ using namespace std;
 dfs 나 bfs로 탐색하면서 한번 돌때마다 answer(네트워크 수) ++
 
 <시간복잡도>
-O(V+E)
+O(V*V)
 */
 
 int answer = 0;
