@@ -49,7 +49,7 @@ int main()
     {
         cin >> K;
 
-        for (int i = 1; i <= K; i++)
+        for (int i = 1; i <= K; i++) // 삼각수 (K)의 최대가 1000이므로 i의 최대는 44이다. 이번문제는 메모리 초과가 안뜨긴 했지만 염두해두면 좋은 조건
         {
             numbers.push_back(i * (i + 1) / 2);
         }
