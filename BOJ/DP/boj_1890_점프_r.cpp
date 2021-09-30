@@ -47,12 +47,13 @@ int main()
         }
     }
 
-    dp[0][0] = 1;
+    dp[0][0] = 1; // 설정을 안해주면 다음 dp 넣어줄 수 없음
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < N; j++)
         {
             int jump = map[i][j];
+            // if(jump != 0) {} 으로 묶어도 됨
             if (i != N - 1 && i + jump < N) // 아래로, map을 벗어나지 않을 경우
             {
                 dp[i + jump][j] += dp[i][j]; // (i,j)까지의 경로의 수가 n일 경우 (i+jump, j)까지의 경로의 수도 기본적으로 n번만큼은 가지고 가야 함
