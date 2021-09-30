@@ -1,47 +1,58 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
+#include <string>
 using namespace std;
-
 /*
-N의 범위가 150만 이므로 일반적인 완전탐색으로는 시간내에 통과할 수 없을듯
--> dp 이용해보기
+[백준 15486 c++ V] 퇴사 2
+문제: 퇴사 문제와 같지만 n이 150만 까지여서 완탐 불가능
+접근: 완전탐색 재귀-> 1.i날 일한 경우 2. 안한 경우 -> 시간복잡도O(2^n) = 2^150만 시간초과 예상 
+접근2: dp 1차원->
+dp점화식 ,
+dp[i] =  i번째 날 상담 하기 전까지 최대 이익.
+바텀업 방식으로 
+1.i번째날 상담 안 한 경우 dp[i+1] =  max(dp[i + 1], dp[i])
+2.i번째날 상담 한 경우 dp[i+t[i]] = max(원래 i+t[i] 날 최대금액과 , i번째 날 일을 한 금액 )
+시간복잡도: O(n) = 150만 
 
-퇴사일(N)까지 벌 수 있는 최대 액수를 구해야 함
-dp[i] : (i-1)일까지 벌 수 있는 최대 액수
-
-퇴사일이 N이라면 답은 dp[N+1]
-
-이해가 안된다ㅏㅏ
+풀이:
+1.시간, 금액배열 입력
+2.dp 
+    1)i번째날 상담 안 한 경우 dp[i+1] =  max(dp[i + 1], dp[i])
+    -> (i+1)일에 상담을 해야 돈을 더 받는지 안받는 지(dp[i + 1])는 그전에 상담 금액 최댓값(dp[i])이랑 비교해야 함
+    2)i번째날 상담 한 경우 dp[i+t[i]] = max(원래 i+t[i] 날 최대금액과 , i번째 날 일을 한 금액 )
+3.n+1 날 수업 전까지 최대금액 출력
 */
-
-#define Max 1500001
-
-int N;
-int dp[Max];
-int T[Max], P[Max]; // T:걸리는 시간, P:금액
+#define MAX 1500000 + 2
+int n;
+int t[MAX], p[MAX];
+long long dp[MAX];
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    ios::sync_with_stdio(false); // 계산시간 단축 // cin,scanf 같이 쓰면 오류
+    cin.tie(nullptr);
+    cout.tie(nullptr); // 입출력 시간 단축 // 이것을 쓰면 scanf,printf섞어 쓰면 안됨
 
-    cin >> N;
-
-    for (int i = 1; i <= N; i++)
+    cin >> n;
+    for (int i = 1; i <= n; i++)
     {
-        cin >> T[i] >> P[i];
+        cin >> t[i] >> p[i];
     }
-
-    for (int i = 1; i <= N; i++)
+    // 바텀업 dp
+    dp[1] = 0; // 첫째날은 번 금액 없음
+    for (int i = 1; i <= n; i++)
     {
-        dp[i + T[i]] = max(dp[i + T[i]], dp[i] + P[i]);
-
-        dp[i + 1] = max(dp[i + 1], dp[i]);
+        if (i + t[i] <= n + 1)
+        {
+            dp[i + t[i]] = max(dp[i + t[i]], dp[i] + p[i]);
+        } // i날 일을 한 경우
+        if (i + 1 <= n + 1)
+        {
+            dp[i + 1] = max(dp[i + 1], dp[i]);
+        } // i날 일을 안 한 경우
     }
-
-    cout << dp[N + 1] << '\n';
-
+    cout << dp[n + 1] << '\n'; // n+1 수업 전까지를 포함해야 n날 수업 까지 포함
     return 0;
 }
