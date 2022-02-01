@@ -31,7 +31,7 @@ int main(){
 
     for (int i = 0; i < N; i++)
     {
-        auto index = lower_bound(sort_location.begin(), sort_location.end(), location[i]); // lower_bound의 return 값은 주소값
+        auto index = lower_bound(sort_location.begin(), sort_location.end(), location[i]);
         cout << index - sort_location.begin() << ' ';
     }
 
