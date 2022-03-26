@@ -1,7 +1,9 @@
 # ⭐️ 알고리즘 캠프
 
-- 알고리즘 일지 (Notion) : https://silly-line-61b.notion.site/de33048f29084269920eb7da8efab884  
-- 블로그 포스팅 (Velog) : https://velog.io/@peanut_/series/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%BA%A0%ED%94%84  
+- 알고리즘 일지 (Notion)
+  https://silly-line-61b.notion.site/de33048f29084269920eb7da8efab884  
+- 블로그 포스팅 (Velog)
+  https://velog.io/@peanut_/series/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%BA%A0%ED%94%84  
   
 # ⭐️ BOJ
   
