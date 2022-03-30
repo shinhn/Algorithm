@@ -18,15 +18,22 @@ int main()
     for(int i=0;i<n;i++){
         int m;
         cin >> m;
-        double avg =0;
+        int score[m];
+        double avg = 0;
         for(int j=0;j<m;j++){
-            int score;
-            cin >> score;
-            avg += score;
+            cin >> score[j];
+            avg += score[j];
         }
         avg = avg / m;
-        cout << avg << "%"
-             << "\n";
+
+        double student=0;
+        for (int j = 0; j < m; j++)
+        {
+            if(score[j]>avg)student++;
+        }
+        student = student/m*100;
+
+        cout << student << "%" << "\n";
     }
 
     return 0;
