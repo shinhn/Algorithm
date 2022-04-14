@@ -1,15 +1,17 @@
 같은 글자끼리 아치형 곡선을 그어 겹치면 안된다.
 따라서 괄호의 짝을 찾는 문제와 같은 문제라고 볼 수 있다.
 
+
 cin >> N
 while(N--){
     cin >> str
     for(i : 0 ~ str.length()-1){
-        if(str[i] == 'A'){
-
-        }
-        else{  // 'B'
-
+        if(stack.empty) stack.push(str[i])
+        else{
+            if(stack.top == str[i]) stack.pop
+            else stack.push(str[i])
         }
     }
+    if(stack.empty) cnt ++
 }
+cout << cnt
