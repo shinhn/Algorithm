@@ -1,0 +1,33 @@
+cin >> num
+
+// 왼쪽, 오른쪽 원소의 수 세기
+for(i = 0 ~ dq.size){
+	if(dq[i] == num){
+    	left = i
+        right = dq.size - left - 1
+    }
+}
+
+// 왼쪽 이동
+if(left <= right + 1){
+	while(1){
+    	if(dq.front == num) break;
+        tmp = dq.front
+        dq.push_back(tmp)
+        dq.pop_front
+        cnt++
+    }
+    dq.pop_front
+}
+else{ // 오른쪽 이동
+    while(1){
+    	if(dq.front == num) break;
+        tmp = dq.back
+        dq.push_front(tmp)
+        dq.pop_back
+        cnt++
+    }
+    dq.pop_front
+}
+
+cout << cnt
