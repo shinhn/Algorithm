@@ -1,0 +1,18 @@
+cin >> N >> K
+
+for(i : 1 ~ N){
+	que.push(i)
+}
+
+while(!que.enpty){
+	if(que.front == K){
+    	vector.push_back(que.front)
+		que.pop
+    }
+    else{
+    	que.push(que.front)
+        que.pop
+    }
+}
+
+print(vector)
