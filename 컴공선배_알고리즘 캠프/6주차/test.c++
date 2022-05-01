@@ -11,7 +11,7 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    cout << "ddd";
+    cout << "dddd";
     
 
     return 0;
