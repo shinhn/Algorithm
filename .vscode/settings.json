@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "iostream": "c++"
-    }
+    },
+    "terminal.integrated.fontFamily": "D2Coding"
 }
