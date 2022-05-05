@@ -11,12 +11,12 @@ int map[20][20];
 int dice[7]; // idx 0 은 의미 없는 값 
 int tmp[7]; // 주사위 복사용
 
-// void print_dice(){
-//     cout << "\n";
-//     for(int j=1;j<=6;j++){
-//         cout << dice[j] << " ";
-//     }  
-// }
+void print_dice(){
+    cout << "\n";
+    for(int j=1;j<=6;j++){
+        cout << dice[j] << " ";
+    }  
+}
 
 int main()
 {
@@ -38,7 +38,7 @@ int main()
         cin >> op;
         if(op == 1) // 동쪽으로 굴리기
         {
-            if(y+1 < N) continue;
+            if(y+1 >= M) continue;
             y += 1;
             
             tmp[6] = dice[3];
