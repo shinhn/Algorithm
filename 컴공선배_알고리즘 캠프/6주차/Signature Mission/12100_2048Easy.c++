@@ -31,7 +31,10 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
             // que에 넣기
             queue<int> que;
             for(int j=N-1;j>=0;j--){
-                que.push(board[i][j]);
+                if(board[i][j]!=0){
+                    que.push(board[i][j]);
+                    board[i][j]=0;
+                }
             }
             // 새로운 배열 채워 넣기
             int k = N-1;
@@ -46,7 +49,7 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
                         if(num1 == num2){ // 같으면 합쳐서 배열의 오른쪽부터 넣고
                             board[i][k] = num1+num2;
                             board[i][k-1] = 0;
-                            k--;
+                            k-=2;
                             que.pop(); // num2 빼줌
                         }
                         else{ // 다르면 본인만 넣음 
@@ -56,10 +59,6 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
                     }
                 }
             }
-            while(k>=0){
-                board[i][k] = 0;
-                k--;
-            }
         }
     }
     // 오른쪽에서 왼쪽
@@ -68,7 +67,10 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
             // que에 넣기
             queue<int> que;
             for(int j=0;j<N;j++){
-                que.push(board[i][j]);
+                if(board[i][j]!=0){
+                    que.push(board[i][j]);
+                    board[i][j]=0;
+                }
             }
             // 새로운 배열 채워 넣기
             int k = 0;
@@ -83,7 +85,7 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
                         if(num1 == num2){ // 같으면 합쳐서 배열의 오른쪽부터 넣고
                             board[i][k] = num1+num2;
                             board[i][k+1] = 0;
-                            k++;
+                            k+=2;
                             que.pop(); // num2 빼줌
                         }
                         else{ // 다르면 본인만 넣음 
@@ -93,10 +95,6 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
                     }
                 }
             }
-            while(k<N){
-                board[i][k] = 0;
-                k++;
-            }
         }
     }
     // 아래에서 위
@@ -105,45 +103,12 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
             // que에 넣기
             queue<int> que;
             for(int j=N-1;j>=0;j--){
-                que.push(board[j][i]);
-            }
-            // 새로운 배열 채워 넣기
-            int k = N-1;
-            while(!que.empty()){
-                if(que.front() == 0)que.pop();
-                else{
-                    int num1 = que.front();
-                    que.pop();
-                    if(!que.empty()){ // num2도 존재할때
-                        int num2 = que.front();
-
-                        if(num1 == num2){ // 같으면 합쳐서 배열의 오른쪽부터 넣고
-                            board[k][i] = num1+num2;
-                            board[k-1][i] = 0;
-                            k--;
-                            que.pop(); // num2 빼줌
-                        }
-                        else{ // 다르면 본인만 넣음 
-                            board[k][i] = num1;
-                            k--;
-                        }
-                    }
+                if(board[j][i]!=0){
+                    que.push(board[j][i]);
+                    board[j][i]=0;
                 }
             }
-            while(k>=0){
-                board[i][k] = 0;
-                k--;
-            }
-        }
-    }
-    // 위에서 아래
-    if(dir == 4){
-        for(int i=0;i<N;i++){
-            // que에 넣기
-            queue<int> que;
-            for(int j=0;j<N;j++){
-                que.push(board[j][i]);
-            }
+            
             // 새로운 배열 채워 넣기
             int k = 0;
             while(!que.empty()){
@@ -157,7 +122,7 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
                         if(num1 == num2){ // 같으면 합쳐서 배열의 오른쪽부터 넣고
                             board[k][i] = num1+num2;
                             board[k+1][i] = 0;
-                            k++;
+                            k+=2;
                             que.pop(); // num2 빼줌
                         }
                         else{ // 다르면 본인만 넣음 
@@ -167,9 +132,42 @@ vector<vector<int> > move_block(vector<vector<int> > board, int dir){
                     }
                 }
             }
-            while(k<N){
-                board[i][k] = 0;
-                k++;
+        }
+    }
+    // 위에서 아래
+    if(dir == 4){
+        for(int i=0;i<N;i++){
+            // que에 넣기
+            queue<int> que;
+            for(int j=0;j<N;j++){
+                if(board[j][i]!=0){
+                    que.push(board[j][i]);
+                    board[j][i]=0;
+                }
+            }
+
+            // 새로운 배열 채워 넣기
+            int k = N-1;
+            while(!que.empty()){
+                if(que.front() == 0)que.pop();
+                else{
+                    int num1 = que.front();
+                    que.pop();
+                    if(!que.empty()){ // num2도 존재할때
+                        int num2 = que.front();
+
+                        if(num1 == num2){ // 같으면 합쳐서 배열의 오른쪽부터 넣고
+                            board[k][i] = num1+num2;
+                            board[k-1][i] = 0;
+                            k-=2;
+                            que.pop(); // num2 빼줌
+                        }
+                        else{ // 다르면 본인만 넣음 
+                            board[k][i] = num1;
+                            k--;
+                        }
+                    }
+                }
             }
         }
     }
