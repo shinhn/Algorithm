@@ -1,6 +1,13 @@
 {
     "files.associations": {
-        "iostream": "c++"
+        "iostream": "c++",
+        "memory": "cpp",
+        "utility": "cpp",
+        "queue": "cpp",
+        "vector": "cpp",
+        "deque": "cpp",
+        "ios": "cpp",
+        "string": "cpp"
     },
     "terminal.integrated.fontFamily": "D2Coding"
 }
