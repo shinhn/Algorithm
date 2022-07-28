@@ -1,7 +1,7 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-
+//
 int h, w, y1, x1, y2, x2, ans;
 int day[101][101];
 bool visited[101][101];
