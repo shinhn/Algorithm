@@ -20,7 +20,7 @@ int main(){
         string str;
         cin >> str;
 
-        student[str] = i;
+        student[str] = i; // key가 중복되는 경우 최신 i 값으로 수정 (insert 함수는 중복 될 수 있음)
     }
 
     for(map<string ,int>::iterator i = student.begin();i != student.end();i++){
