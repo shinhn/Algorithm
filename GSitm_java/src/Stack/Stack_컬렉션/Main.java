@@ -1,4 +1,4 @@
-package Java_컬렉션;
+package Stack.Stack_컬렉션;
 
 import java.util.Stack;
 
@@ -6,7 +6,7 @@ class Main
 {
     public static void main(String[] args)
     {
-        Stack<String> stack = new Stack<String>();
+        Stack<String> stack = new Stack<>();
 
         stack.push("A");    // Stack에 `A` 삽입
         stack.push("B");    // Stack에 `B` 삽입

@@ -1,4 +1,4 @@
-package Java_Array;
+package Stack.Stack_Array;
 
 class Main {
     public static void main (String[] args)
