@@ -10,6 +10,7 @@ int DT[31];
 int com(int num){
     if(num==1) DT[num] = 1;
     if(DT[num]==0) DT[num] = DT[num-1] * num;
+    
     return DT[num];
 }
 
