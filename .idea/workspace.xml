@@ -5,7 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9b14551-86da-4cd0-8587-195252f2fd85" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/java/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/main/java/com/example/java/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/main/java/com/example/java/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/main/resources/com/example/java/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/Stack_Array/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/Stack_Array/Stack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/Stack_컬렉션/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/프로그래머스_같은숫자는싫어/Solution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/프로그래머스_올바른괄호/Solution.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,24 +60,12 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3882353&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Algorithm" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Algorithm" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,6 +81,10 @@
       <workItem from="1659011603830" duration="418000" />
       <workItem from="1659069397464" duration="587000" />
       <workItem from="1659070173097" duration="50000" />
+      <workItem from="1668398622560" duration="42000" />
+      <workItem from="1668398683711" duration="310000" />
+      <workItem from="1668399174877" duration="164000" />
+      <workItem from="1668399354572" duration="580000" />
     </task>
     <servers />
   </component>
