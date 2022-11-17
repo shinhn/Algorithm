@@ -23,7 +23,7 @@ public class Bubble {
             }
         }
 
-        System.out.print("정렬된 결과 : ");
+        System.out.print("정렬된 결과 => ");
         for(int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
