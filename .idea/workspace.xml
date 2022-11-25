@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b14551-86da-4cd0-8587-195252f2fd85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/java/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/java/com/example/java/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/java/com/example/java/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/resources/com/example/java/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/git_toolbox_prj.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/Stack_Array/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/Stack_Array/Stack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/Stack_컬렉션/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/프로그래머스_같은숫자는싫어/Solution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSitm_java/src/Stack/프로그래머스_올바른괄호/Solution.java" beforeDir="false" />
-    </list>
+    <list default="true" id="f9b14551-86da-4cd0-8587-195252f2fd85" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,6 +60,7 @@
       <workItem from="1668398683711" duration="310000" />
       <workItem from="1668399174877" duration="164000" />
       <workItem from="1668399354572" duration="580000" />
+      <workItem from="1669332592877" duration="89000" />
     </task>
     <servers />
   </component>
