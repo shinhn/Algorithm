@@ -7,8 +7,8 @@
             ],
             "defines": [],
             "macFrameworkPath": [
-                // "/System/Library/Frameworks",
-                // "/Library/Frameworks"
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
             ],
             "compilerPath": "/usr/bin/g++",
             "cStandard": "c17",
