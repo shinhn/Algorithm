@@ -6,9 +6,9 @@
 
 using namespace std;
 
-int arr[200001];
-int pSum[200001];
-int ans;
+int arr[200002];
+int pSum[200002];
+long long ans;
 
 map<int, int> pSum_cnt;
 
@@ -21,34 +21,15 @@ int main()
     int N, K;
     cin >> N >> K;
 
-    for(int i=0;i<N;i++){
+    for(int i=1;i<=N;i++){
         cin >> arr[i];
-        if(i==0) pSum[0] = arr[0];
-        else pSum[i] = pSum[i-1] + arr[i];
+        pSum[i] = pSum[i-1] + arr[i];
     }
 
-    for(int i=0;i<N;i++){
-        cout << pSum[i] << " ";
+    for(int i=1;i<=N;i++){
+        if(pSum[i] == K) ans++;
+        if(pSum_cnt[pSum[i]-K]) ans+=pSum_cnt[pSum[i]-K];
         pSum_cnt[pSum[i]]++;
-    }
-    cout << "\n";
-
-    for(auto iter = pSum_cnt.begin();iter != pSum_cnt.end();iter++){
-        cout << iter -> first << " : " << iter -> second << "\n";
-
-        if(iter -> first == K) {
-            cout << iter -> first << " --> " << "\n";
-            ans += iter -> second;
-        }
-
-        for(auto iter2 = iter;iter2 != pSum_cnt.end();iter2++){
-            if(iter2->first == iter->first) continue;
-            
-            if((iter2 -> first) - (iter -> first) == K) {
-                cout << iter -> first << " --> " << iter2 -> first << "\n";
-                ans += ((iter -> second)*(iter2 -> second));
-            }
-        }
     }
 
     cout << ans << "\n";
