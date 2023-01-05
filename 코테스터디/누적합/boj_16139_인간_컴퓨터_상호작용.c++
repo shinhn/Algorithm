@@ -21,6 +21,14 @@ void CountAlp(){
         sum_s[s[i]-'a'][i] = 1; 
     }
 
+    cout << "\n";
+    for(int i=0;i<s.size();i++){
+        for(int j=0;j<26;j++){
+            cout << sum_s[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
     // 누적합 만듦
     for(int i=1;i<s.size();i++){
         for(int j=0;j<26;j++){
@@ -28,6 +36,15 @@ void CountAlp(){
             else sum_s[j][i] = sum_s[j][i-1];
         }
     }
+
+    cout << "\n";
+    for(int i=0;i<s.size();i++){
+        for(int j=0;j<26;j++){
+            cout << sum_s[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    cout << "\n";
 }
 
 int main()
@@ -37,6 +54,7 @@ int main()
     cout.tie(NULL);
 
     cin >> s;
+    
     CountAlp();
 
     cin >> q;
@@ -52,6 +70,8 @@ int main()
             cout << sum_s[ch-'a'][r] - sum_s[ch-'a'][l-1] << "\n";
         }
     }
+
+    
 
     return 0;
 }
