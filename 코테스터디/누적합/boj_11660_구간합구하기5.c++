@@ -12,24 +12,8 @@ using namespace std;
 */
 
 int N, M;
-int map[1025][1025];
-int sum_map[1025][1025]; // 누적합
-
-void Set_sum_map(int x, int y){
-    if(x==0 && y==0){
-        sum_map[x][y] = map[x][y];
-        return;
-    }
-
-    int sum=0;
-    for(int i=0;i<=x;i++){
-        for(int j=0;j<=y;j++){
-            sum += map[i][j];
-        }
-    }
-
-    sum_map[x][y] = sum;
-}
+int map[1026][1026];
+int pSum_map[1026][1026]; // 누적합
 
 int main()
 {
@@ -39,28 +23,18 @@ int main()
 
     cin >> N >> M;
 
-    for(int i=0;i<N;i++){
-        for(int j=0;j<N;j++){
+    for(int i=1;i<=N;i++){
+        for(int j=1;j<=N;j++){
             cin >> map[i][j];
-            Set_sum_map(i, j);
+            pSum_map[i][j] = pSum_map[i-1][j] + pSum_map[i][j-1] - pSum_map[i-1][j-1] + map[i][j];
         }
     }
 
     for(int i=0;i<M;i++){
         int x1, y1, x2, y2;
         cin >> x1 >> y1 >> x2 >> y2;
-        cout << sum_map[x2][y2] - sum_map[x1-1][y2] - sum_map[x2][y1-1] + sum_map[x1-1][y1-1]<< "\n";
+        cout << pSum_map[x2][y2] - pSum_map[x1-1][y2] - pSum_map[x2][y1-1] + pSum_map[x1-1][y1-1] << "\n";
     }
-
-    // cout << "\n";
-    // for(int i=0;i<N;i++){
-    //     for(int j=0;j<N;j++){
-    //         cout << sum_map[i][j] << " ";
-    //     }
-    //     cout << "\n";
-    // }
-    // cout << "\n";
-
 
     return 0;
 }
