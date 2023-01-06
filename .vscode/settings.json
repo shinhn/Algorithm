@@ -74,5 +74,8 @@
         "__functional_base": "cpp",
         "functional": "cpp"
     },
-    "terminal.integrated.fontFamily": "D2Coding"
+    "terminal.integrated.fontFamily": "D2Coding",
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && clang++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    }
 }
