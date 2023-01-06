@@ -27,40 +27,22 @@ int main()
         int n;
         cin >> n;
 
-        for(int j=1;j*n <= N+2;j++){
-            if(check[n] == -1) continue;
-            check[j*n] = 1;
+        if(check[n] == 0){
+            for(int j=n;j<=N+2;j+=n){
+                if(check[j] != -1) check[j] = 1;
+            }
         }
     }
 
-    cout << "\n";
-    for(int i=0;i<=N+2;i++){
-        cout << i << " ";
-    }
-    
-    cout << "\n";
-    for(int i=0;i<=N+2;i++){
-        cout << check[i] << " ";
-    }
-    cout << "\n";
-
-    if(check[3] == -1 ||check[3] == 0) pSum[3] = 1;
-
-    for(int i=4;i<=N+2;i++){
-        if(check[i] == 0 || check[i] == -1) pSum[i] = pSum[i-1] + 1;
+    for(int i=3;i<=N+2;i++){
+        if(check[i] != 1) pSum[i] = pSum[i-1] + 1;
         else pSum[i] = pSum[i-1];
     }
-
-    for(int i=0;i<=N+2;i++){
-        cout << pSum[i] << " ";
-    }
-    cout << "\n";
 
     for(int i=0;i<M;i++){
         int s,e;
         cin >> s >> e;
-        if(s-1 >= 3) cout << pSum[e] - pSum[s-1] << "\n";
-        else cout << pSum[e] << "\n";
+        cout << pSum[e] - pSum[s-1] << "\n";
     }
 
     return 0;
