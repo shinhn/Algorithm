@@ -6,7 +6,7 @@ using namespace std;
 
 int N, M;
 int arr[100001];
-int high, low = 0;
+int high, low = 0, ans;
 
 bool isPossible(int mid){
     int sum = 0;
@@ -36,11 +36,14 @@ int main(){
     while(low <= high){
         int mid = (low + high)/2;
 
-        if(isPossible(mid)) low = mid + 1;
+        if(isPossible(mid)) {
+            ans = mid;
+            low = mid + 1;
+        }
         else high = mid - 1;
     }
 
-    cout << high << "\n";
+    cout << ans << "\n";
 
     return 0;
 }

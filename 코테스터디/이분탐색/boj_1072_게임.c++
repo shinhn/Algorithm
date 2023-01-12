@@ -25,16 +25,19 @@ int main(){
         return 0;
     }
 
-    long long left=0, right=1000000000;
+    long long left=0, right=1000000000, ans;
     while(left <= right){
         long long mid = (left + right)/2;
 
         long long win_per = (Y+mid)*100/(X+mid);
         if(win_per <= Z) left = mid + 1;
-        else right = mid - 1;
+        else {
+            ans = mid;
+            right = mid - 1;
+        }
     }
 
-    cout << left << "\n";
+    cout << ans << "\n";
 
     return 0;
 }
