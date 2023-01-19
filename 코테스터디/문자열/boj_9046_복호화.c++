@@ -12,7 +12,7 @@ int main(){
 
     int N;
     cin >> N;
-    cin.ignore();
+    cin.ignore(); // 버퍼 지움 (이후 빈칸 포함하는 문자열을 입력 받기 위해)
 
     while(N--){
         string str;
@@ -22,7 +22,7 @@ int main(){
         fill(alp, alp+26, 0);
 
         for(int i=0;i<str.length();i++){
-            if(str[i] == ' ') continue;
+            //if(str[i] == ' ') continue;
             alp[str[i] - 'a'] ++;
         }
 

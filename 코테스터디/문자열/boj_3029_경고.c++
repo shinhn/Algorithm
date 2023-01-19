@@ -26,6 +26,12 @@ int main(){
     if(sec2 < sec1) sec2 += 24*60*60;
 
     int ans = sec2 - sec1;
+
+    if(ans == 0){ // 기다리는 시간의 범위는 1초 ~ 24시간이라고 했으므로 현재시간과 던질시간이 같을 경우 "24:00:00" 출력
+        cout << "24:00:00" << "\n";
+        return 0;
+    }
+
     int h,m,s;
 
     h = ans/3600;
@@ -38,18 +44,14 @@ int main(){
 
     if(h<10) cout << 0 << h;
     else cout << h;
-
     cout << ':';
 
     if(m<10) cout << 0 << m;
     else cout << m;
-
     cout << ':';
 
     if(s<10) cout << 0 << s << "\n";
     else cout << s << "\n";
-
-    
 
     return 0;
 }
