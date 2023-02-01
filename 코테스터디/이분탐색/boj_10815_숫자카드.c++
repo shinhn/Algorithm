@@ -25,9 +25,24 @@ int main(){
     }
 
     for(int i=0;i<M;i++){
-        if(binary_search(a,a+500001,b[i])) cout << "1 ";
-        else cout << "0 ";
+        int low = 0, high = N-1, ans = 0;
+        while(low <= high){
+            int mid = (low + high)/2;
+            if(b[i] > a[mid]){
+                low = mid + 1;
+            }
+            else if(b[i] < a[mid]){
+                high = mid - 1;
+            }
+            else{
+                ans = 1;
+                break;
+            }
+        }
+
+        cout << ans << " ";
     }
+    
 
     return 0;
 }
