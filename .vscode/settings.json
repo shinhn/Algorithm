@@ -72,7 +72,8 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "__functional_base": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "iomanip": "cpp"
     },
     "terminal.integrated.fontFamily": "D2Coding",
     "code-runner.executorMap": {
