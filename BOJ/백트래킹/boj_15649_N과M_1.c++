@@ -17,6 +17,8 @@ void dfs(int size){
             cout << arr[i] << " ";
         }
         cout << "\n";
+
+        return;
     }
 
     for(int i=1;i<=N;i++){
