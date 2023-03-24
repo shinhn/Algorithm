@@ -85,6 +85,13 @@ void print(){
     cout << ans << "\n\n";
 }
 
+void print_vec(){
+    for(int i=0;i<can_eat.size();i++){
+        cout << "(" << can_eat[i].first << ", " << can_eat[i].second << " -> " << map[can_eat[i].first][can_eat[i].second] << ") ";
+    }
+    cout << '\n';
+}
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -103,7 +110,7 @@ int main()
         }
     }
 
-    //print();
+    print();
 
     while(1){
         can_eat.clear();
@@ -114,16 +121,13 @@ int main()
 
             if(can_eat.size() == 1){
                 bfs(1,can_eat[0].first, can_eat[0].second);
+                print_vec();
             }
             else{
                 sort(can_eat.begin(), can_eat.end(), cmp);
+                print_vec();
                 bfs(1,can_eat[0].first, can_eat[0].second);
             }
-
-            // for(int i=0;i<can_eat.size();i++){
-            //     cout << "(" << can_eat[i].first << ", " << can_eat[i].second << ") ";
-            // }
-            // cout << '\n';
 
             int ty = can_eat[0].first;
             int tx = can_eat[0].second;
@@ -141,7 +145,7 @@ int main()
             }
         }
 
-        //print();
+        print();
     }
 
     cout << ans << '\n';
